@@ -1,0 +1,368 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{002E7863-D5B7-4910-B541-C3281D4831DE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DSLR_CameraStore</RootNamespace>
+    <AssemblyName>DSLR_CameraStore</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CreportTransaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreportTransaction.Designer.cs">
+      <DependentUpon>CreportTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrystalReport2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport3.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport3.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DetailProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetailProduct.Designer.cs">
+      <DependentUpon>DetailProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DetailTransaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetailTransaction.Designer.cs">
+      <DependentUpon>DetailTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dsLogin.cs">
+      <DependentUpon>dsLogin.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsLogin.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsLogin.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="formLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formLogin.Designer.cs">
+      <DependentUpon>formLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formLoginn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formLoginn.Designer.cs">
+      <DependentUpon>formLoginn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuAdmin.Designer.cs">
+      <DependentUpon>MenuAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="nyoba.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>nyoba.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product.Designer.cs">
+      <DependentUpon>Product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportLogin.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportLogin.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="sqlConnect.cs" />
+    <Compile Include="tbEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tbEmployee.Designer.cs">
+      <DependentUpon>tbEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction.Designer.cs">
+      <DependentUpon>Transaction.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CreportTransaction.resx">
+      <DependentUpon>CreportTransaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport3.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport3.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetailProduct.resx">
+      <DependentUpon>DetailProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetailTransaction.resx">
+      <DependentUpon>DetailTransaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formLogin.resx">
+      <DependentUpon>formLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formLoginn.resx">
+      <DependentUpon>formLoginn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuAdmin.resx">
+      <DependentUpon>MenuAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="nyoba.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>nyoba.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product.resx">
+      <DependentUpon>Product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ReportLogin.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReportLogin.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tbEmployee.resx">
+      <DependentUpon>tbEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction.resx">
+      <DependentUpon>Transaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="dsLogin.xsc">
+      <DependentUpon>dsLogin.xsd</DependentUpon>
+    </None>
+    <None Include="dsLogin.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsLogin.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsLogin.xss">
+      <DependentUpon>dsLogin.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="KAMERA\P001.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="KAMERA\background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="KAMERA\P002.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="KAMERA\P003.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="KAMERA\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="KAMERA\Save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="KAMERA\update.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="KAMERA\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="KAMERA\Background Camera.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="KAMERA\buttonemployee.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="KAMERA\buttonproductdetail.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="KAMERA\buttontransaksidetail.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="KAMERA\admin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="KAMERA\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="KAMERA\backbuttoncircle_79559.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="KAMERA\P004.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="KAMERA\P005.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="KAMERA\P006.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="KAMERA\Ke 1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="KAMERA\Ke 2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="KAMERA\Kee 2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="KAMERA\Employee Background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="KAMERA\Product Background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="KAMERA\Payment Background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="KAMERA\Login Admin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="KAMERA\Camera Background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="KAMERA\Paymenttt Background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="KAMERA\1771.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="KAMERA\back admin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="KAMERA\back Employee .png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="KAMERA\Save Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="KAMERA\diskette.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="KAMERA\back transaction.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="KAMERA\back Product list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="KAMERA\Order.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="KAMERA\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="KAMERA\account-login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="KAMERA\1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="KAMERA\2.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
